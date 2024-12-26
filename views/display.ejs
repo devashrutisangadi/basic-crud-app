@@ -1,0 +1,24 @@
+
+
+<table border="3">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Mobile</th>
+        <th>Action</th>
+    </tr>
+    <% for(var i=0; i<mydata.length; i++){ %>
+        <tr>
+            <td><%= i+1 %></td>
+            <td><%= mydata[i].uname%></td>
+            <td><%= mydata[i].ugender%></td>
+            <td><%= mydata[i].umobile%></td>
+            <td><a href="/show/<%=mydata[i]._id%>">show</a>
+                <a href="/edit/<%=mydata[i]._id%>">edit</a>
+                <a href="/delete/<%=mydata[i]._id%>">delete</a>
+            </td>
+
+        </tr>
+    <% } %>
+</table>
